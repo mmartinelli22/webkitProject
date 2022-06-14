@@ -9,11 +9,41 @@
 </head>
 
 <body>
-  <img src="./images/turing-logo.png" alt="turing logo">
+  <img src="./images/photo.png" alt="turing logo">
+  <header class>
+    <h1></h1>
+    <div class="sign-in-container">
+      <form class="sign-in-form">
+        <label for="username-input" class="login">Username</label>
+        <input type="text" name="username" class="login-form" id="username-input" placeholder="Username" required>
+        <label for="password-input" class="login">Password</label>
+        <input type="password" name="password" class="login-form" id="password-input" placeholder="Password" required>
+        <label for="login-submit" class="login">Submit</label>
+        <input type="submit" value="Sign In" class="button" id="login-submit">
+      </form>
+      <p class="error-message hidden" id="login-error-message">try again</p>
+    </div>
+    <h2 class="hidden" id="welcome-text"></h2>
+  </header>
 
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
 
 </body>
+<form class="user-form">
+  <label for="start">Start Date:</label>
+  <input type="date" name="start" id="start" required>
+  <label for="trip-duration">Number of Days:</label>
+  <input type="number" name="trip-duration" id="trip-duration" minlength="1" min="1" required>
+  <label for="travelers">Number of Travelers:</label>
+  <input type="number" name="travelers" id="travelers" minlength="1" min="1" required>
+  <label for="trip-destination">Destination:</label>
+  <select name="trip-destination" id="trip-destination" required>
+    <option value="" disabled selected></option>
+  </select>
+  <p class="hidden" id="trip-cost"></p>
+  <button type="button" name="button" class="button submit" id="submit-button">Request Trip</button>
+  <p class="error-message" id="trip-error-message"></p>
+</form>
 
 </html>
