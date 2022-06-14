@@ -1,9 +1,10 @@
 class Traveler {
     constructor(traveler) {
-        this.name = traveler.name
+        this.name = traveler.name;
     }
 
-    findFirstName() {
+    returnFirstName() {
         return this.name.split(' ')[0];
-    }
-}
+    };
+};
+export default Traveler;
